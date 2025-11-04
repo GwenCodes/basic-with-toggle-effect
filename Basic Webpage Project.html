@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <title>Interior Design</title>
+    <style>
+      body {
+        background: rgb(44, 32, 10);
+      }
+      h1 {
+        text-align: center;
+        font-family: "Quattrocento", serif;
+        font-size: 70px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-style: normal;
+      }
+      h2 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 30px;
+        font-style: normal;
+      }
+      img {
+        width: 100%;
+      }
+      button {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        background: rgb(68, 136, 4);
+        border-radius: 6px;
+        margin: 20px auto;
+        padding: 5px 10px;
+        border: none;
+        color: antiquewhite;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: rgb(94, 64, 10);
+        color: antiquewhite;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+      .theme-button {
+        font-size: 12px;
+        background: black;
+        line-height: 24px;
+        color: antiquewhite;
+        transition: all 150ms ease-in-out;
+      }
+      .theme-button:hover {
+        background: antiquewhite;
+        color: rgb(61, 44, 12);
+        cursor: pointer;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 18px;
+        text-decoration: none;
+        color: #7e5dda;
+      }
+      footer {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 10px;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+      }
+
+      .first-bathroom-picture {
+        transition: all 150ms ease-in-out;
+        max-height: 600px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      .first-bathroom-picture:hover {
+        filter: opacity(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 15px 0;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+      .dark {
+        background: linear-gradient(
+          57.4deg,
+          rgb(249, 206, 183) 4.6%,
+          rgb(234, 174, 202) 26%,
+          rgb(210, 182, 226) 49.1%,
+          rgb(173, 209, 242) 86.5%
+        );
+
+        color: white;
+      }
+      .dark .container {
+        background: rgba(88, 88, 88, 0.3);
+      }
+
+      .dark button {
+        background: #7e5dda;
+        color: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body class="dark">
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>Home Design</h1>
+      <h2>Ideas for Small Bathrooms</h2>
+      <img
+        src="https://www.bhg.com/thmb/iSoVrsDgE34JIrMMG8eAmCiF_as=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7002697_AA0788_preview-14d7c62cdbb04998a01cb5918ba0547e.jpg"
+        alt
+        class="first-bathroom-picture" />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/163/271/original/T6A2i_1_?1744832796"
+          alt="" />
+        <img
+          src="https://s3.img-b.com/image/private/t_base,c_pad,f_auto,dpr_2,w_450,h_450/product/kohler/kohler-kss-purist-4-rths-2mb.jpg"
+          alt="" />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/163/270/original/9TXvq_1_?1744832681"
+          alt="" />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/163/273/original/seamless-medicine-cabinet-xl_1_.jpg?1744832907"
+          alt="" />
+      </div>
+      <br />
+      <p>
+        Bathroom renovations are not for the faint of heart. In this blog, I
+        will share stunning design ideas to help you on your next bathroom
+        remodel.
+      </p>
+      <br />
+      <a
+        href="https://en.wikipedia.org/wiki/Interior_design"
+        target="_blank"
+        rel="noopener"
+        >📖 Read about Interior Design
+      </a>
+
+      <button>Order the Book</button>
+    </div>
+    <footer>
+      <br />
+      <div>Coded by Gwen Munoz</div>
+      <br />
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        //body.classList.add("dark");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
